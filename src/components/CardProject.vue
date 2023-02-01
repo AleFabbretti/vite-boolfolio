@@ -4,7 +4,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ data.title }}</h5>
       <p class="card-text">
-        {{ data.description }}
+        {{ truncateText(data.description) }}
       </p>
       <a href="#" class="btn btn-primary">Leggi di più</a>
     </div>
@@ -16,6 +16,11 @@ export default {
   name: "CardProject",
   props: {
     data: Object,
+  },
+  methods: {
+    truncateText(text) {
+      return text.substring(0, 250) + "...";
+    },
   },
 };
 </script>
