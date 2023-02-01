@@ -1,19 +1,26 @@
 <template>
   <section>
     <h2>Lista dei Progetti</h2>
-    <ul>
-      <li v-for="project in projects">
-        {{ project.title }}
-      </li>
-    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" v-for="project in projects">
+          <CardProject :data="project" />
+        </div>
+      </div>
+    </div>
+    <ul></ul>
   </section>
 </template>
 
 <script>
 import axios from "axios";
+import CardProject from "./CardProject.vue";
 
 export default {
   name: "ListProjects",
+  components: {
+    CardProject,
+  },
   data() {
     return {
       projects: [],
