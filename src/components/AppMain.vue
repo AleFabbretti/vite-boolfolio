@@ -1,18 +1,15 @@
 <script>
 import axios from "axios";
-import ListProjects from "./ListProjects.vue";
 
 export default {
   name: "AppMain",
-  components: {
-    ListProjects,
-  },
+  components: {},
 };
 </script>
 
 <template>
   <main>
-    <ListProjects />
+    <router-view></router-view>
   </main>
 </template>
 
