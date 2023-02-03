@@ -14,7 +14,7 @@
       <router-link
         :to="{ name: 'single-project', params: { slug: data.slug } }"
         class="btn btn-primary"
-        >Leggi di più</router-link
+        >Leggi ancora</router-link
       >
     </div>
   </div>
